@@ -20,15 +20,15 @@ class GridAdapter(private val callBack: (Player) -> Unit) :
     inner class GridViewHolder(private val binding: ItemGridBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Player) {
             binding.apply {
-                /*if (item.isKeeper == true && item.isCaptain == true) {
+                if (item.isKeeper == true && item.isCaptain == true) {
                     txtView.text = "${item.nameFull} (WK) (C)"
                 } else if (item.isCaptain == true) {
                     txtView.text = "${item.nameFull} (C)"
                 } else if (item.isKeeper == true) {
                     txtView.text = "${item.nameFull} (WK)"
-                } else {*/
-                txtView.text = "${item.nameFull}"
-//            }
+                } else {
+                    txtView.text = "${item.nameFull}"
+                }
 
                 itemRoot.setOnClickListener {
                     callBack.invoke(item)
