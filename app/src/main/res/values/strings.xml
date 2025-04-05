@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">SportzInteractive</string>
+    <string name="explore_more">Explore more</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

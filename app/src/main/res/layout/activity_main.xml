@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_ipl_ground_image">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_team_a"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/all_teams_csk"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintWidth_percent="0.2"
+        android:layout_marginStart="10dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_team_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/img_team_a"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="CSK"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_marginStart="10dp"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_team_b"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/all_teams_dc"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintWidth_percent="0.2"
+        android:layout_marginEnd="10dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_team_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/img_team_b"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="CHEN"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_marginEnd="10dp"/>
+
+    <View
+        android:id="@+id/stadiumShadow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha=".4"
+        android:background="#05090A"
+        app:layout_constraintBottom_toBottomOf="@+id/viewBottom"
+        app:layout_constraintEnd_toEndOf="@+id/txt_stadium"
+        app:layout_constraintStart_toStartOf="@+id/txt_stadium"
+        app:layout_constraintTop_toTopOf="@+id/viewTop" />
+
+    <View
+        android:id="@+id/viewTop"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="@+id/tv_team_a"
+        app:layout_constraintEnd_toEndOf="@+id/tv_team_b"
+        app:layout_constraintTop_toBottomOf="@id/img_team_b" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_stadium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:alpha=".9"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/dp5"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewTop"
+        tools:text="Wankhede Stadium, Mumbai" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMatchDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_marginEnd="@dimen/dp2"
+        android:alpha=".8"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintEnd_toStartOf="@+id/txt_match_time"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_stadium"
+        tools:text="Wed,08 Mar," />
+
+    <TextView
+        android:id="@+id/txt_match_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_marginEnd="@dimen/dp5"
+        android:layout_toEndOf="@+id/tvMatchDate"
+        android:alpha=".8"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/tvMatchDate"
+        app:layout_constraintTop_toBottomOf="@+id/txt_stadium"
+        tools:text="00:00 IST" />
+
+    <View
+        android:id="@+id/viewBottom"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/tvMatchDate"
+        app:layout_constraintEnd_toEndOf="@+id/tv_team_b"
+        app:layout_constraintStart_toStartOf="@+id/tv_team_a"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_explore_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/explore_more"
+        app:layout_constraintTop_toBottomOf="@+id/viewBottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_tab"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
